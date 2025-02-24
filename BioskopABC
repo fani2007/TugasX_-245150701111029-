@@ -1,0 +1,26 @@
+public class BioskopABC {
+    public static void main(String[] args) {
+        Film film1 = new Film("Action Hero", "Action", "14:00", 50000);
+        Film film2 = new Film("Romantic Love", "Romance", "16:00", 45000);
+        Film film3 = new Film("Horror Night", "Horror", "18:00", 55000);
+
+        Studio studio1 = new Studio(1, 100, film1);
+        Studio studio2 = new Studio(2, 80, film2);
+        Studio studio3 = new Studio(3, 90, film3);
+
+        new Tiket(101, film1, studio1, 5, "fani");
+        new Tiket(102, film2, studio2, 12, "Budi");
+        new Tiket(103, film3, studio3, 7, "Siti");
+        new Tiket(104, film1, studio1, 8, "Andi");
+        new Tiket(105, film2, studio2, 15, "Dewi");
+
+        System.out.println("Informasi Bioskop ABC:");
+        studio1.displayInfo();
+        studio2.displayInfo();
+        studio3.displayInfo();
+
+        studio1.displayTiket();
+        studio2.displayTiket();
+        studio3.displayTiket();
+    }
+}
