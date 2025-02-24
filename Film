@@ -1,0 +1,19 @@
+public class Film {
+    private String judul, genre, jamTayang;
+    private double hargaTiket;
+
+    public Film(String judul, String genre, String jamTayang, double hargaTiket) {
+        this.judul = judul;
+        this.genre = genre;
+        this.jamTayang = jamTayang;
+        this.hargaTiket = hargaTiket;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public void displayInfo() {
+        System.out.println("Judul: " + judul + ", Genre: " + genre + ", Jam Tayang: " + jamTayang + ", Harga: " + hargaTiket);
+    }
+}
