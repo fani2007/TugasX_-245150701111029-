@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class Studio {
+    private int nomorStudio, kapasitasKursi;
+    private Film film;
+    private ArrayList<Tiket> tiketList = new ArrayList<>();
+
+    public Studio(int nomorStudio, int kapasitasKursi, Film film) {
+        this.nomorStudio = nomorStudio;
+        this.kapasitasKursi = kapasitasKursi;
+        this.film = film;
+    }
+
+    public int getNomorStudio() {
+        return nomorStudio;
+    }
+
+    public void addTiket(Tiket tiket) {
+        tiketList.add(tiket);
+    }
+
+    public void displayInfo() {
+        System.out.println("Studio " + nomorStudio + " (Kapasitas: " + kapasitasKursi + ") menayangkan:");
+        film.displayInfo();
+    }
+
+    public void displayTiket() {
+        System.out.println("\nTiket untuk Studio " + nomorStudio + ":");
+        for (Tiket tiket : tiketList) {
+            tiket.displayInfo();
+        }
+    }
+}
