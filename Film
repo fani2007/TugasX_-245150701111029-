@@ -13,6 +13,18 @@ public class Film {
         return judul;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getjamTayang() {
+        return jamTayang;
+    }
+
+    public double gethargaTiket() {
+        return hargaTiket;
+    }
+
     public void displayInfo() {
         System.out.println("Judul: " + judul + ", Genre: " + genre + ", Jam Tayang: " + jamTayang + ", Harga: " + hargaTiket);
     }
